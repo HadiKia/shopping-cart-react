@@ -1,0 +1,30 @@
+@import url("reset.css");
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2em 1.5em 1.5em;
+  background: #FFFFFF;
+}
+.navbar a {
+  color: #22215B;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+.navbarCart span {
+  color: #22215B;
+}
+@media only screen and (min-width: 768px) {
+  .navbar a {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .navbar{
+    background: #EEF7FE;
+  }
+  .navbar a {
+    font-size: 1.5rem;
+  }
+}

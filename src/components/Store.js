@@ -7,16 +7,26 @@ import Navbar from "./shared/Navbar";
 // Context
 import { ProductsContext } from "../context/ProductContextProvider";
 
+// Style
+import styles from "./styles/Store.module.css"
+
 const Store = () => {
   const products = useContext(ProductsContext);
 
   return (
-   <div>
+   <div className={styles.container}>
      <Navbar />
-     <div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
-      {products.map((product) => (
-        <Product key={product.id} productData={product} />
-      ))}
+     <div className={styles.productsContainer}>
+      <h3 className={styles.welcome}>Welcome!</h3>
+      {
+        products.length ?
+        products.map((product) => (<Product key={product.id} productData={product} />)) :
+        <div className={styles.loading}>
+          <svg viewBox="25 25 50 50">
+            <circle r="20" cy="50" cx="50"></circle>
+          </svg>
+        </div>
+      }
     </div>
    </div>
   );

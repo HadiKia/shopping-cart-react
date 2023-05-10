@@ -1,0 +1,150 @@
+@import url("reset.css");
+
+.productItem {
+  width: 100%;
+  height: 130px;
+  display: flex;
+  justify-content: space-between;
+  gap: 0 1em;
+  padding: 1em;
+  border-radius: 1em;
+  background: #ffffff;
+  animation: show .7s alternate linear;
+  box-shadow: 5px 5px 10px #C7DDED;
+}
+
+.productImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productImg img {
+  width: 72px;
+}
+
+.productTitle {
+  text-align: left;
+  margin-right: 1.8em;
+}
+
+.productTitle h3 {
+  font-size: 1rem;
+  color: #22215B;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+
+.productTitle a {
+  color: #22215B;
+  opacity: .6;
+  font-size: 14px;
+}
+
+.productHandler {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0 1em;
+}
+.productHandler p {
+  color: #22215B;
+}
+
+.productHandlerItem {
+  display: flex;
+  align-items: center;
+  gap: 0 0.75em;
+  justify-content: center;
+}
+.trash {
+  padding-top: 0.4em;
+}
+
+.productHandlerItem button {
+  background: #22215B;
+  color: #E6E5FF;
+  font-weight: 500;
+  border-radius: 0.5em;
+  font-size: 0.9rem;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+.productHandlerItem .increase,
+.productHandlerItem .decrease {
+  font-size: 1.2rem;
+  background: none;
+  padding: 0;
+  color: #22215B;
+}
+
+@media only screen and (min-width: 768px) {
+  .productItem {
+    flex-direction: column;
+    height: auto;
+    justify-content: space-between;
+    gap: 1.5em 0;
+    transition: all 0.3s ease-in-out;
+  }
+  .productImg {
+    height: 300px;
+  }
+  .productImg img {
+    width: 180px;
+  }
+  .productTitle h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-right: 0;
+  }
+  .productTitle a {
+    font-size: 1.1rem;
+  }
+  .productHandler {
+    flex-direction: row;
+    align-items: center;
+  }
+  .productHandler p {
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+  .productHandlerItem {
+    gap: 0 1em;
+  }
+  .productHandlerItem button {
+    font-size: 1rem;
+  }
+  .trash {
+    padding-top: 0.25em;
+  }
+  .productHandlerItem span {
+    font-size: 1.2rem;
+  }
+  .productHandlerItem .increase,
+  .productHandlerItem .decrease {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .productItem {
+    border: 1px solid #C7DDED;
+    box-shadow: none;
+  }
+  .productItem:hover {
+    box-shadow: 10px 10px 20px #C7DDED, -5px -5px 20px #C7DDED;
+    border: 1px solid #C7DDED;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

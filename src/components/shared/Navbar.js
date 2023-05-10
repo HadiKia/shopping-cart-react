@@ -4,20 +4,23 @@ import { Link } from "react-router-dom";
 // Context
 import { CartContext } from "../../context/CartContextProvider";
 
+// Style
+import styles from "../styles/Navbar.module.css"
+
 // Icons
 const shopIcon = (
-  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none">
+  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="currentColor">
     <path
-      stroke="#001833"
+      stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth="1.5"
       d="m2.98 3.52 2.25.4 1.05 12.42c.08 1.01.93 1.8 1.95 1.8h11.81c.98 0 1.8-.72 1.94-1.68L23 9.36c.11-.8-.44-1.54-1.23-1.65L5.59 7.69M15.3 11.7h3"
     />
     <path
-      fill="#001833"
+      fill="none"
       fillRule="evenodd"
-      stroke="#001833"
+      stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth="1.5"
@@ -31,9 +34,9 @@ const Navbar = () => {
   const { state } = useContext(CartContext);
 
   return (
-    <div>
+    <div className={styles.navbar}>
       <Link to="/products">Products</Link>
-      <div>
+      <div className={styles.navbarCart}>
         <Link to="/cart"><span>{shopIcon}</span></Link>
         <span>{state.itemsCounter}</span>
       </div>
