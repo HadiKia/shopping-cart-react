@@ -17,7 +17,6 @@ const Store = () => {
    <div className={styles.container}>
      <Navbar />
      <div className={styles.productsContainer}>
-      <h3 className={styles.welcome}>Welcome!</h3>
       {
         products.length ?
         products.map((product) => (<Product key={product.id} productData={product} />)) :

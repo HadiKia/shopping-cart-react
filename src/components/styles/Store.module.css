@@ -9,14 +9,9 @@
   flex-direction: column;
   gap: 1.5em 5em;
   text-align: left;
-  background: #EEF7FE;
   border-radius: 2em 2em 0 0;
   padding: 1.2em 1.5em;
-  box-shadow: 10px 10px 0px #EEF7FE, 0px 0px 10px #C7DDED;
-}
-h3 {
-  color: #22215B;
-  font-weight: 300;
+  box-shadow: 10px 10px 0px #FFFFFF, 0px 0px 10px #C7DDED;
 }
 
 @media only screen and (min-width: 768px) {
@@ -33,17 +28,13 @@ h3 {
 }
 @media only screen and (min-width: 1000px) {
   body {
-    background: #EEF7FE;
+    background: #FFFFFF;
   }
   .productsContainer {
     grid-template-columns: repeat(3, 1fr);
-    background: #EEF7FE;
     box-shadow: none;
     border-top: 1px solid #C7DDED;
     border-radius: 0;
-  }
-  .welcome {
-    display: none;
   }
 }
 @media only screen and (min-width: 1300px) {
@@ -68,7 +59,7 @@ h3 {
  
  .loading circle {
   fill: none;
-  stroke: #22215B;
+  stroke: #578EF5;
   stroke-width: 2;
   stroke-dasharray: 1, 200;
   stroke-dashoffset: 0;

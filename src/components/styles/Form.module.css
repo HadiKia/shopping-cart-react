@@ -1,0 +1,193 @@
+.container {
+  background: #ffffff;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.formContainer {
+  width: 100%;
+  background: #ffffff;
+  padding: 2.5em 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5em 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 2em 0;
+}
+.header div:nth-child(1) a {
+  color: #22215b;
+}
+.header div:nth-child(2) {
+  padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em 0;
+  color: #22215b;
+}
+.header h3 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #22215b;
+}
+.header p {
+  font-size: 0.9rem;
+  opacity: 0.5;
+  font-weight: 300;
+}
+
+.inputBox {
+  padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 3em 0;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 0.5em 0;
+}
+.formFieldInput {
+  display: flex;
+  align-items: center;
+  gap: 0 0.5em;
+  padding: 0 0.5em 0.3em;
+  border-bottom: 1px solid #22215b60;
+}
+
+.inputIcon {
+  display: flex;
+  color: #578ef5;
+}
+.inputIconUncompleted {
+  display: flex;
+  color: #e22423;
+}
+
+.formInput {
+  width: 100%;
+  padding: 0.3em 0.8em;
+  border-left: 1px solid #22215b60;
+  color: #22215b;
+  transition: all 0.2s ease-in;
+  font-size: .9rem;
+}
+
+.formFieldInput input::placeholder {
+  color: #22215b60;
+  font-size: 0.9rem;
+}
+
+.formField span {
+  height: 0px;
+  width: fit-content;
+  font-size: 0.8rem;
+  color: #e22423;
+  animation: move .15s alternate linear;
+}
+
+.checkBoxContainer {
+  display: flex;
+  align-items: center;
+  gap: 0 0.5em;
+  color: #22215b60;
+  font-size: 0.9rem;
+}
+
+.checkBoxContainer label span {
+  font-size: 0.9rem;
+  color: #578ef5;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #578ef5;
+  border-radius: 5px;
+  transition: all 0.2s ease-in;
+}
+
+input[type="checkbox"]:checked {
+  width: 18px;
+  height: 18px;
+  background: #578ef5;
+}
+
+input[type="checkbox"]:focus {
+  height: 18px;
+  width: 18px;
+  outline: none;
+}
+
+.submitButton {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 1em;
+}
+
+button {
+  background: #578ef5;
+  border-radius: 50%;
+  padding: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  border: none;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  box-shadow: 0px 5px 20px #578EF570;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+.formPagesLink {
+  position: absolute;
+  left: 2.5em;
+  bottom: 4em;
+  color: #22215b60;
+  font-size: 0.9rem;
+}
+.formPagesLink a {
+  color: #578ef5;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  .formContainer {
+    position: relative;
+    width: fit-content;
+    padding: 2em;
+    border-radius: 1em;
+    border: 1px solid #C7DDED;
+  }
+  .formPagesLink {
+    left: 3em;
+  }
+}
+
+@keyframes move {
+  0%{
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(10px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}

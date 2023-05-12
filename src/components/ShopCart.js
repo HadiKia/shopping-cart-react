@@ -19,8 +19,7 @@ const ShopCart = () => {
       <Navbar />
      
       <div className={styles.shopCartMain}>
-      <h3 className={styles.shopCartMainTitle}>Your Cart:</h3>
-      <div style={{width : '100%'}}>
+      <div className={styles.cartMain}>
         {state.selectedItems.map((item) => (<Cart key={item.id} data={item} />))}
       </div>
 

@@ -4,31 +4,35 @@
   margin: 0 auto;
   background: #ffffff;
 }
-.shopCartMainTitle {
-  color: #22215b;
-  font-weight: 300;
-}
+
 .shopCartMain {
   display: flex;
   flex-direction: column;
   gap: 1.5em 0;
   justify-content: space-between;
   text-align: left;
-  background: #eef7fe;
+  background: #FFFFFF;
   border-radius: 2em 2em 0 0;
   padding: 1.2em 1.5em;
-  box-shadow: 10px 10px 0px #eef7fe, 0px 0px 10px #c7dded;
+  box-shadow: 10px 10px 0px #FFFFFF, 0px 0px 10px #c7dded;
 }
-.totalPrice {
-  background: #ffffff;
+.cartMain{
+  width: 100%;
+  background: #FFFFFF;
   box-shadow: 5px 5px 10px #c7dded;
   border-radius: 1em;
-  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.totalPrice {
+  background: #EEF7FE;
+  box-shadow: 5px 5px 10px #c7dded;
+  border-radius: 1em;
+  padding: 1em 1.1em;
   display: flex;
   flex-direction: column;
 }
 .totalPrice p {
-  font-weight: 400;
   color: #22215b;
   font-size: 1.1rem;
   margin-bottom: 1em;
@@ -46,36 +50,42 @@
 }
 .handlerButtons button {
   background: none;
-  padding: 0.5em 1em;
+  padding: 0.6em 1em;
   border-radius: 0.5em;
   font-weight: 500;
+  border: 1px solid #578EF5;
 }
 
-.handlerButtons button:nth-child(1) {
-  background: #eef7fe;
-  color: #22215b;
-  box-shadow: 0px 5px 10px #c7dded;
+.handlerButtons button:nth-child(1) {  
+  color: #578EF5;
+  background: #578EF530;
+  border: 1px solid #578EF500;
+  box-shadow: 2px 5px 10px #578EF550;
 }
 .handlerButtons button:nth-child(2) {
-  background: #22215b;
-  color: #e6e5ff;
-  box-shadow: 5px 5px 10px #c7dded;
+  background: #578EF5;
+  color: #FFFFFF;
+  box-shadow: 5px 5px 10px #578EF570;
 }
 .nullCart {
+  position: absolute;
+  left: 0;
+  right: 0;
   text-align: center;
 }
 .nullCart h3 {
   color: #22215b;
-  margin: 2em 0;
-  font-size: 1.6rem;
+  margin: 3em 0;
+  font-size: 1.4rem;
 }
 .nullCart a {
   font-size: 1.1rem;
-  padding: 0.5em 1em;
+  padding: 0.6em 1em;
   border-radius: 0.5em;
-  background: #22215b;
-  color: #e6e5ff;
+  background: #578EF5;
+  color: #FFFFFF;
   font-weight: 500;
+  box-shadow: 0px 5px 20px #578EF570;
 }
 @media only screen and (min-width: 768px) {
   .shopCartMainTitle {
@@ -83,7 +93,7 @@
   }
   .shopCartMain {
     flex-direction: row;
-    gap: 0 1em;
+    gap: 0 2em;
     align-items: flex-start;
   }
   .totalPrice p {
@@ -103,13 +113,10 @@
   }
 }
 @media only screen and (min-width: 1000px){
-  .container{
-    background: #eef7fe;
-  }
   .shopCartMain{
     border-radius: 0;
     box-shadow: none;
-     border-top: 1px solid #C7DDED;
+    border-top: 1px solid #C7DDED;
   }
   .totalPrice{
     padding: 1.3em;
