@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 
 // Context
 import { ProductsContext } from "../context/ProductContextProvider";
@@ -84,12 +84,17 @@ const userIcon = (
   </svg>
 );
 
-const ProductDetails = (props) => {
+const ProductDetails = () => {
+  const params = useParams()
   const { state } = useContext(CartContext);
-  const id = props.match.params.id;
+  const id = params.id;
   const data = useContext(ProductsContext);
   const product = data[id - 1];
   const { image, title, description, price, category } = product;
+
+  useEffect(() => {
+    document.title = "Product details"
+  }, [])
 
   return (
     <div className={styles.detailsContainer}>

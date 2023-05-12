@@ -37,6 +37,7 @@ const Login = () => {
 
   useEffect(() => {
     setErrors(validate(data, "login"));
+    document.title = "Log in"
   }, [data, touched]);
 
   const changeHandler = (event) => {

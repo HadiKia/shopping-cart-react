@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 // Components
 import Product from "./shared/Product";
@@ -12,6 +12,9 @@ import styles from "./styles/Store.module.css"
 
 const Store = () => {
   const products = useContext(ProductsContext);
+  useEffect(() => {
+    document.title = "Products"
+  }, [])
 
   return (
    <div className={styles.container}>

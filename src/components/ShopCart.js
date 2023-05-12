@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // Components
@@ -13,6 +13,9 @@ import styles from "./styles/ShopCart.module.css"
 
 const ShopCart = () => {
   const { state, dispatch } = useContext(CartContext);
+  useEffect(() => {
+    document.title = "Shop cart"
+  }, [])
 
   return (
     <div className={styles.container}>
