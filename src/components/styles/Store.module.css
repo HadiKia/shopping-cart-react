@@ -8,10 +8,29 @@
   display: flex;
   flex-direction: column;
   gap: 1.5em 5em;
-  text-align: left;
   border-radius: 2em 2em 0 0;
   padding: 1.2em 1.5em;
   box-shadow: 10px 10px 0px #FFFFFF, 0px 0px 10px #C7DDED;
+}
+.searchBox{
+  display: flex;
+  align-items: center;
+  gap: 0 .5em;
+  border-radius: 1em;
+  text-align: left;
+  margin: 0 1.5em 2em;
+  padding: .8em 1em;
+  box-shadow: 0px 0px 20px #C7DDED;
+}
+.searchBox span{
+  display: flex;
+}
+.searchBox input{
+  color: #22215b;
+}
+
+.searchBox input::placeholder{
+  color: #22215b70;
 }
 
 @media only screen and (min-width: 768px) {
@@ -21,9 +40,10 @@
     padding: 2em 1.5em;
     gap: 3em 5em;
   }
-  .welcome {
+  .searchBox {
     grid-column: 1/3;
-    font-size: 1.5rem;
+    box-shadow: none;
+    border: 1px solid #C7DDED;
   }
 }
 @media only screen and (min-width: 1000px) {
@@ -36,12 +56,18 @@
     border-top: 1px solid #C7DDED;
     border-radius: 0;
   }
+  .searchBox {
+    grid-column: 1/4;
+  }
 }
 @media only screen and (min-width: 1300px) {
   .productsContainer {
     grid-template-columns: repeat(4, 1fr);
     padding: 2em 1.5em;
     gap: 4em 3em;
+  }
+  .searchBox {
+    grid-column: 1/5;
   }
 }
 

@@ -23,6 +23,7 @@
 - Validation form
 - Product details page
 - Get data in <a target="_blank" href="https://fakestoreapi.com/">API</a> 
+- Search products
 - Add and remove item from cart
 - Minus and plus quantity cart items
 - Reset cart items
